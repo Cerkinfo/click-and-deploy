@@ -34,4 +34,3 @@ def deploy_app(app_id):
     fabfile.env.hosts = app['target']
 
     fabric.tasks.execute(fabfile.deploy)
-    (path('/tmp') / str(random.randint(0,10))).touch()
