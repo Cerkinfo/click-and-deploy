@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+    <title>Auto-deploy</title>
+</head>
+<body>
+    <h1>List of applications</h1>
+    <ul>
+    {% for app in apps %}
+      <li><a href="app/{{ app.id }}">{{ app.name }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
