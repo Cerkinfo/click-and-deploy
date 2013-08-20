@@ -32,5 +32,6 @@ def deploy_app(app_id):
     app = app_id_to_data(app_id)
     fabfile = importlib.import_module('apps.recipies.'+app_id)
     fabfile.env.hosts = app['target']
+    fabfile.env.key_filename = SSH_ID_PATH
 
     fabric.tasks.execute(fabfile.deploy)
