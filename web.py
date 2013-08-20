@@ -24,7 +24,7 @@ def show_app(app_id):
     app = lib.app_id_to_data(app_id)
     return render_template('app.html', app=app)
 
-@flapp.route("/app/<app_id>/deploy/")
+@flapp.route("/app/<app_id>/deploy/", methods=['GET', 'POST'])
 def deploy_app(app_id):
     lib.app_exists(app_id)
     job = q.enqueue(lib.deploy_app, app_id)
