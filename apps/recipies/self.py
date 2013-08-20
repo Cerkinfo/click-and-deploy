@@ -1,15 +1,14 @@
 from fabric.api import run, cd, env
 from fabric import state
 
-DISTANT_PATH = 'testing'
+DISTANT_PATH = 'click-and-deploy'
 
 def pull():
     with cd(DISTANT_PATH):
         run('git pull')
 
 def restart_services():
-    print 'restarting some things'
-    #run('sudo supervisorctl restart ' + ' '.join(PROCESSES))
+    run('sudo supervisorctl restart deploy:')
 
 def deploy():
     pull()
