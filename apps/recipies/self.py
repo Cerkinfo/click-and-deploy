@@ -8,7 +8,7 @@ def pull():
         run('git pull')
 
 def restart_services():
-    run('sudo supervisorctl restart deploy:')
+    run('sudo supervisorctl restart deploy:deploy-web')
 
 def deploy():
     pull()
