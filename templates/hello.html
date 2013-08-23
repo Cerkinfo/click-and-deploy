@@ -1,12 +1,13 @@
-<!doctype html>
-<head>
-    <title>Auto-deploy</title>
-</head>
-<body>
-    <h1>List of applications</h1>
-    <ul>
+{% extends "base.html" %}
+{% block content %}
+<h1>Available applications</h1>
+<div class="row demo-row">
     {% for app in apps %}
-      <li><a href="app/{{ app.id }}">{{ app.name }}</a></li>
+        <div class="span5">
+            <h3 class="demo-panel-title"><a href="app/{{ app.id }}">{{ app.name }}</a></h3>
+            <p>{{ app.description }}</p>
+            <p><a class="btn btn-success" href="app/{{ app.id }}">Last version deployed</a></p>
+        </div>
     {% endfor %}
-    </ul>
-</body>
+</div>
+{% endblock %}

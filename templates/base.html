@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+    <title>{% block title %}Auto deploy{% endblock %}</title>
+    <link href="/static/bootstrap.css" rel="stylesheet">
+    <link href="/static/flat-ui.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container" style="margin: 0 5% 0 5%">
+        <div class="demo-headline">
+            <h1 class="demo-logo">
+                {% block header %}Deployer{% endblock %}
+                <small>{% block header_small %}Just click to deploy{% endblock %}</small>
+            </h1>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span7">
+                    <h3 class="footer-title">More infos ?</h3>
+                    <p>
+                        Do you like this ? Want to contribute ?
+                        You want to add your own app to this awesome thing ? You want to roll you own ? <br/>
+                        It is possible ! Go to: <a href="//github.com/C4ptainCrunch/click-and-deploy" >github.com/C4ptainCrunch/click-and-deploy</a>
+                    </p>
+                    <p>
+                        <br>This awesome pice of software is made by <a href="//urlab.be" >UrLab</a> a Belgian hackerspace in Brussels
+                    </p>
+                </div>
+                <div class="span5">
+                    <div class="footer-banner">
+                        <h3 class="footer-title">Use this thing ! </h3>
+                        <ul>
+                            <li>Made by UrLab</li>
+                            <li>Makes easy to deploy all the time</li>
+                            <li>It makes good use of Fabric</li>
+                            <li>And its written in Python</li>
+                        </ul>
+                        Go to: <a href="//github.com/C4ptainCrunch/click-and-deploy" >the Github repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

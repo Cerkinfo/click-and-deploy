@@ -1,11 +1,33 @@
-<!doctype html>
-<head>
-    <title>Auto-deploy {{ app.name }}</title>
-</head>
-<body>
-    <h1>{{ app.name }}</h1>
-    <h2>Desription</h2>
-    <p>{{ app.description }}</p>
-    <p><a href="/app/{{ app.id }}/deploy">Just deploy it !</a></p>
-    </p>
-</body>
+{% extends "base.html" %}
+
+{% block title %}{{ app.name }} deployer{% endblock %}
+
+{% block header %}{{ app.name }}{% endblock %}
+
+{% block content %}
+<div class="row demo-row">
+    <div class="span4">
+        <h3 class="demo-panel-title">Desription</h3>
+        <p>{{ app.description }}</p>
+    </div>
+    <div class="span4">
+        <h3 class="demo-panel-title">Actions</h3>
+        <p><a class="btn btn-success btn-block" href="/app/{{ app.id }}/deploy">Deploy now !</a></p>
+        <p><a class="btn btn-warning btn-block" href="#">Goto version...</a></p>
+        <p><a class="btn btn-danger btn-block" href="#">Roll back !</a></p>
+        <p><a class="btn btn-block" href="/">Go back home</a></p>
+    </div>
+    <div class="span4">
+        <h3 class="demo-panel-title">Infos</h3>
+        <h4>Last version :</h4>
+        <ul><li>4da0b86</li></ul>
+        <h4>Last deployed version :</h4>
+        <ul><li>4da0b86</li></ul>
+        <h4>Last deploy time :</h4>
+        <ul><li>12h00 GMT</li></ul>
+    </div>
+</div>
+{% endblock %}
+
+
+
