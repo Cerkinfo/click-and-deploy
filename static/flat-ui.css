@@ -191,9 +191,10 @@ you can use the generic selector below, but it's slower:
   line-height: 100px;
 }
 .demo-logo .logo {
-  background: url(../images/demo/logo-mask.png) center 0 no-repeat;
-  background-size: 256px 186px;
-  height: 186px;
+  background: url(logo.png) center 0 no-repeat;
+  background-size: 128px 128px;
+  height: 128px;
+  float: right;
   margin: 0 auto 26px;
   overflow: hidden;
   text-indent: -9999em;
