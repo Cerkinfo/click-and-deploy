@@ -183,7 +183,16 @@ you can use the generic selector below, but it's slower:
 .demo-headline {
   padding: 73px 0 110px;
   text-align: center;
+  display: block;
+  text-decoration: none;
+  color: rgb(52, 73, 94);
 }
+
+.demo-headline:hover {
+  color: rgb(52, 73, 120);
+}
+
+
 .demo-logo {
   font-size: 90px;
   font-weight: 900;
