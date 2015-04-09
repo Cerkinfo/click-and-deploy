@@ -15,6 +15,6 @@ def gen_graphs():
     run('/home/homepage/homepage/openings_cron_script.sh')
 
 def deploy():
-    pull()
+    pull_update()
     restart_services()
     gen_graphs()
