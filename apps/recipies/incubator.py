@@ -1,4 +1,4 @@
-from fabric.api import run, cd
+from fabric.api import run, cd, env
 from fabric.context_managers import prefix
 
 
