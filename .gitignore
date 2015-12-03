@@ -2,3 +2,6 @@
 *.pyo
 ve/
 deploy_settings.py
+deploy_settings.py
+logs/
+gunicorn_start
