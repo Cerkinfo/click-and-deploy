@@ -1,5 +1,5 @@
 {
     "name" : "Self",
-    "description" : "This is the application you are looking at right now.",
+    "description" : "This is the click-and-deploy application.",
     "target" : "admin@localhost"
 }
