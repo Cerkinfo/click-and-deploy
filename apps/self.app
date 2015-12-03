@@ -1,5 +1,5 @@
 {
     "name" : "Self",
-    "description" : "This is the click-and-deploy application. To update itself",
+    "description" : "This is the click-and-deploy application.",
     "target" : "admin@localhost"
 }
